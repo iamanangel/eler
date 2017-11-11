@@ -122,6 +122,10 @@ a:focus {
 .btn11 {
     margin-bottom: 15px;
 }
-.bg-login {
+.lt-login {
     background-color: #222d32;
+    padding-top: 200px;
+}
+.btn-right {
+    margin-right: 50px;
 }

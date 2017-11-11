@@ -14,7 +14,7 @@ $('.lt_aside .menu').on('click','[href="javascript:;"]', function () {
 })
 
 //退出功能
-$('.btn-primary').on('click', function () {
+$('#lgout-modal').on('click', function () {
     $.ajax({
         type: 'get',
         url: '/employee/employeeLogout',
