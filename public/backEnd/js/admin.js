@@ -17,10 +17,10 @@ $('.lt_aside .menu').on('click','[href="javascript:;"]', function () {
 $('.btn-primary').on('click', function () {
     $.ajax({
         type: 'get',
-        url: 'javascript',
+        url: '/employee/employeeLogout',
         dataType: 'json',
         success: function (data) {
-            if(success){
+            if(data.success == true){
                 location.href = './login.html';
             }
         }

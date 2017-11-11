@@ -122,3 +122,6 @@ a:focus {
 .btn11 {
     margin-bottom: 15px;
 }
+.bg-login {
+    background-color: #222d32;
+}
