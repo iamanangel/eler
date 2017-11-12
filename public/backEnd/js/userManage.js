@@ -60,6 +60,7 @@ $(function () {
                     console.log(data);
                     if( data.success == true) {
                         $('#manage-modal').modal('hide'); 
+                        getUserManageData();
                     }
                 } 
             })

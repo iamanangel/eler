@@ -9,7 +9,7 @@
 $('.lt_aside .menu').on('click','[href="javascript:;"]', function () {
     var _this = $(this);
     // console.log(_this);
-    var child = _this.siblings();
+    var child = _this.siblings('.child');
     child.slideToggle();
 })
 

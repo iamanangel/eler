@@ -27,7 +27,7 @@
         </div>
         <ul class="menu">
             <li>
-                <a href="javascript:;">
+                <a href="./userManage.html">
                     <i class="glyphicon glyphicon-user"></i> 用户管理
                 </a>
             </li>
@@ -36,8 +36,8 @@
                     <i class="glyphicon glyphicon-list"></i> 分类管理
                 </a>
                 <div class="child">
-                    <a href="javascript:;">一级分类</a>
-                    <a href="javascript:;">二级分类</a>
+                    <a href="./categoryFirst.html">一级分类</a>
+                    <a href="./categorySecond.html">二级分类</a>
                 </div>
             </li>
             <li>
@@ -66,7 +66,7 @@
                 <li class="active">二级分类</li>
             </ol>
             <div class="lt_content">
-                <button type="button" class="btn btn-default btn11" data-toggle="modal" data-target="#addBtn">
+                <button type="button" class="btn btn-default btn11" data-toggle="modal" data-target="#second-modal">
                     添加分类
                 </button>
                 <table class="table table-bordered table-hover">
@@ -81,38 +81,6 @@
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>女士馆</td>
-                            <td>阿萨德2</td>
-                            <td>
-                                <img src="" alt="">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>女士馆</td>
-                            <td>阿萨德2</td>
-                            <td>
-                                <img src="" alt="">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>女士馆</td>
-                            <td>阿萨德2</td>
-                            <td>
-                                <img src="" alt="">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>女士馆</td>
-                            <td>阿萨德2</td>
-                            <td>
-                                <img src="" alt="">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
                             <td>女士馆</td>
                             <td>阿萨德2</td>
                             <td>
@@ -152,8 +120,8 @@
             </div>
         </div>
     </div>
-    <!-- 一级添加 -->
-    <div class="modal fade" id="addBtn" tabindex="-1">
+    <!-- 二级添加 -->
+    <div class="modal fade" id="second-modal" tabindex="-1">
         <div class="modal-dialog modal-sm" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -163,13 +131,23 @@
                     <h4 class="modal-title" id="myModalLabel">添加分类</h4>
                 </div>
                 <div class="modal-body">
+                    <div class="dropdown">
+                        <span>一级分类：</span>
+                        <a id="dLabel" data-target="#" class="btn btn-default" href="http://example.com" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            请选择
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dLabel">
+                            <li><a href="javascript:;"></a></li>
+                        </ul>
+                    </div>
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="请添加一级分类" aria-describedby="sizing-addon2">
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                    <button type="button" class="btn btn-primary">确定</a>
+                    <button type="button" id="second-save" class="btn btn-primary">确定</a>
                 </div>
             </div>
         </div>
