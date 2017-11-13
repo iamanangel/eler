@@ -14,6 +14,19 @@
     <link rel="stylesheet" href="./lib/bootstrap-validator/css/bootstrapValidator.min.css">
     <!-- 引入当前页面的css -->
     <link rel="stylesheet" href="./css/admin.css">
+
+    <style>
+        .fileupload {
+            position: relative;
+        }
+
+        .fileupload input {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -90,10 +103,8 @@
                     </tbody>
                 </table>
                 <div class="page">
-                    <ul class="pagination pagination-sm">
-                        <li class="active">
-                            <a href="#">1</a>
-                        </li>
+                    <ul class="pagination">
+                        
                     </ul>
                 </div>
             </div>
@@ -133,40 +144,73 @@
                 <div class="modal-body">
                     <div class="dropdown">
                         <span>一级分类：</span>
-                        <a id="dLabel" data-target="#" class="btn btn-default" href="http://example.com" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            请选择
+                        <button id="dLabel" class="btn btn-default" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false">
+                            <span class="dropdown-text">请选择</span>
                             <span class="caret"></span>
-                        </a>
+                    </button>
                         <ul class="dropdown-menu" aria-labelledby="dLabel">
-                            <li><a href="javascript:;"></a></li>
+                            
                         </ul>
                     </div>
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="请添加一级分类" aria-describedby="sizing-addon2">
-                    </div>
+                    <form id="secondform">
+                        <!-- 隐藏的input  用来存放上面ul里面的a的自定义属性里面的 -->
+                        <input type="hidden" id="categoryId" name="categoryId">
+                        <div class="form-group">
+                            <label for="brandName" class="sr-only">二级分类</label>
+                            <input type="text" class="form-control" name="brandName" id="brandName" placeholder="请输入二级分类名称">
+                        </div>
+                        <div class="form-group fileupload">
+                            <input type="hidden" id="brandLogo" name="brandLogo">
+                            <a href="javascript:;" class="btn btn-default">上传图片</a>
+                            <input type="file" name="pic1" id="secondupload">
+                        </div>
+                        <div class="preview" style="margin-top: 20px;">
+                            <img id="previewimg" width="100" height="100" src="./images/none.png" alt="">
+                        </div>
+                    </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                    <button type="button" id="second-save" class="btn btn-primary">确定</a>
+                    <button type="submit" id="second-save" class="btn btn-primary" form="secondform">确定</a>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- 模板引擎 -->
+    <script type=text/template id="second-template">
+        <%for (var i = 0; i < rows.length; i++) {%>
+            <tr>
+                <td><%=(page-1)*size+1+i%></td>
+                <td><%=rows[i].categoryName%></td>
+                <td><%=rows[i].brandName%></td>
+                <td>
+                    <img height="30" src="<%=rows[i].brandLogo%>" alt="">
+                </td>
+            </tr>
+            <%}%>
+    </script>
 
 
     <!-- 引入jquery -->
     <script src="./lib/jquery/jquery.min.js"></script>
     <!-- 引入bootstrap的插件 -->
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
-    <!-- 引入echarts库 -->
-    <script src="./lib/echarts/echarts.min.js"></script>
+    <!-- 引入模板库 -->
+    <script src="./lib/artTemplate/template-native.js"></script>
     <!-- 引入表单验证的插件 -->
     <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+    <!-- 分页模板 -->
+    <script src="./lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
     <!-- 引入进度条插件 -->
     <script src="./lib/nprogress/nprogress.js"></script>
+    <!-- 引入文件上传插件 -->
+    <script src="./lib/jquery-fileupload/jquery.ui.widget.js"></script>
+    <script src="./lib/jquery-fileupload/jquery.fileupload.js"></script>
     <!-- 引入admin文件 -->
     <script src="./js/admin.js"></script>
+    <script src="./js/categorySecond.js"></script>
 </body>
 
 </html>
