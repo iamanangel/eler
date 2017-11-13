@@ -14,6 +14,19 @@
     <link rel="stylesheet" href="./lib/bootstrap-validator/css/bootstrapValidator.min.css">
     <!-- 引入当前页面的css -->
     <link rel="stylesheet" href="./css/admin.css">
+
+    <style>
+        .fileupload {
+            position: relative;
+        }
+
+        .fileupload input {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -65,7 +78,7 @@
                 <li class="active">商品管理</li>
             </ol>
             <div class="lt_content">
-                <button type="button" class="btn btn-default btn11" data-toggle="modal" data-target="#addBtn">
+                <button type="button" class="btn btn-default btn11" data-toggle="modal" data-target="#productModel">
                     添加商品
                 </button>
                 <table class="table table-bordered table-hover">
@@ -86,7 +99,7 @@
                 </table>
                 <div class="page">
                     <ul class="pagination">
-                        
+
                     </ul>
                 </div>
             </div>
@@ -113,8 +126,8 @@
             </div>
         </div>
     </div>
-    <!-- 一级添加 -->
-    <div class="modal fade" id="addBtn" tabindex="-1">
+    <!-- 二级添加 -->
+    <div class="modal fade" id="productModel" tabindex="-1">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -124,31 +137,44 @@
                     <h4 class="modal-title" id="myModalLabel">编辑商品</h4>
                 </div>
                 <div class="modal-body">
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="请输入商品名称">
-                    </div>
-                    <textarea class="form-control" rows="2" placeholder="请输入商品描述"></textarea>
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="请输入商品名称库存">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="请输入商品价格">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="请输入商品原价">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="请输入商品尺码">
-                    </div>
-                    <div class="form-group">
-                        <input type="file" id="exampleInputFile" class="btn btn-default" style="opacity: 0;">
-                        <a href="javascript:;" class="btn btn-default">上传图片</a>
-                        <span>提示：必须上传三个图片</span>
-                    </div>
+                    <form id="productform">
+                        <div class="form-group">
+                            <label for="proName" class="sr-only">二级分类</label>
+                            <input type="text" class="form-control" name="proName" id="proName" placeholder="请输入商品名称">
+                        </div>
+                        <div class="form-group">
+                            <label for="proDesc" class="sr-only">二级分类</label>
+                            <textarea type="text" class="form-control" name="proDesc" id="proDesc" placeholder="请输入商品描述"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="num" class="sr-only">二级分类</label>
+                            <input type="text" class="form-control" name="num" id="num" placeholder="请输入商品库存">
+                        </div>
+                        <div class="form-group">
+                            <label for="price" class="sr-only">二级分类</label>
+                            <input type="text" class="form-control" name="price" id="price" placeholder="请输入商品价格">
+                        </div>
+                        <div class="form-group">
+                            <label for="oldPrice" class="sr-only">二级分类</label>
+                            <input type="text" class="form-control" name="oldPrice" id="oldPrice" placeholder="请输入商品原价">
+                        </div>
+                        <div class="form-group">
+                            <label for="size" class="sr-only">二级分类</label>
+                            <input type="text" class="form-control" name="size" id="size" placeholder="请输入商品尺码">
+                        </div>
+                        <div class="form-group fileupload">
+                            <div style="margin-bottom: 20px;">
+                                <label for="pic" class="sr-only">二级分类</label>
+                                <a href="javascript:;" class="btn btn-default">上传图片</a>
+                                <input type="file" id="pic" name="pic1" class="btn btn-default">
+                                <span>提示：必须上传三个图片</span>
+                            </div>
+                        </div>
+                    </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                    <button type="button" class="btn btn-primary">确定</a>
+                    <button type="submit" class="btn btn-primary" form="productform">确定</a>
                 </div>
             </div>
         </div>
