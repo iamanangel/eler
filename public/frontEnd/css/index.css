@@ -1,0 +1,131 @@
+
+.mui-content {
+    width: 100%;
+}
+.mui-grid-view.mui-grid-9 .mui-table-view-cell {
+    margin: 0;
+    padding:0;
+}
+.mui-content ul li {
+    width: 33.333%;
+}
+.mui-content ul a {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.mui-content ul a img {
+    width: 100%;
+    vertical-align: middle;
+}
+.cz-cate {
+    margin-top: 0px;
+    padding: 0 10px;
+}
+.mui-content>.mui-table-view:first-child {
+    margin-top: 0px;
+}
+.cz-cate ul {
+    display: none;
+}
+.cz-active {
+    width: 100%;
+    overflow: hidden;
+    padding: 0 10px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.cz-active a {
+    display: block;
+}
+.cz-active a:nth-child(2n+1) {
+    width: 67.1%;
+    float: left;
+}
+.cz-active a:nth-child(2n+1) img {
+    width: 50%;
+    float: left;
+}
+.cz-active a:nth-child(2n) {
+    width: 32.9%;
+    float: right;
+}
+.cz-active a:nth-child(2n) img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+/* brand专区 */
+.cz-brand {
+    width: 100%;
+    padding: 0 10px;  
+}
+.cz-brand>img {
+    width: 100%;
+    vertical-align: middle;
+}
+.cz-brand ul {
+    width: 100%;
+    overflow: hidden;
+}
+.cz-brand ul li {
+    float: left;
+    width: 25%;
+}
+.cz-brand ul a {
+    display: block;
+    width: 100%;
+}
+.cz-brand ul a img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+/* live专区 */
+.cz-live {
+    width: 100%;
+    padding: 0 10px;
+    text-align: center;
+    box-sizing: border-box;
+}
+.cz-live>img {
+    width: 100%;
+    vertical-align: middle;
+}
+.cz-live a {
+    display: block;
+    float: left;
+    width: 50%;
+    padding: 0 6px;
+    background-color: #fff;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+}
+
+.cz-live a img {
+    width: 100%;
+    vertical-align: middle;
+}
+.cz-live .box {
+    background-color: #fff;
+    box-shadow: 0 0 5px #ccc;
+}
+.cz-live .name {
+    padding: 0 8px;
+    text-align: center;
+}
+.cz-live p {
+    text-align: center;
+}
+.cz-live p .price {
+    color: red;
+}
+.cz-live p .oldPrice {
+    text-decoration: line-through;
+}
+.cz-live .btn {
+    text-align: center;
+    background-color: #006699;
+    margin: 8px 0;
+    color:#fff;
+}

@@ -1,0 +1,87 @@
+a {
+    text-decoration: none;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+ul li {
+    list-style: none;
+}
+
+.cz-container {
+    width: 100%;
+    height: 100%;
+    padding-top: 45px;
+    padding-bottom: 50px;
+}
+/* 头部导航 */
+.cz_topBar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    background-color: #006699;
+    z-index: 100;
+    text-align: center;
+    color: #fff;
+}
+.cz_topBar .mui-icon-back {
+    position: absolute;
+    display: inline-block;
+    font-size: 22px;
+    left: 10px;
+    height: 100%;
+    line-height: 45px;
+    color: #fff;
+    font-weight: bold;
+}
+.cz_topBar .mui-icon-search {
+    position: absolute;
+    display: inline-block;
+    font-size: 22px;
+    right: 10px;
+    height: 100%;
+    line-height: 45px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.cz-tabs {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #006699;
+    width: 100%;
+    height: 50px;
+    z-index: 100;
+}
+.cz-tabs a {
+    position : relative;
+    display: block;
+    float: left;
+    width: 25%;
+    height: 100%;
+    /* padding-bottom: 30px; */
+    /* line-height: 50px; */
+    text-align: center;
+}
+.fa-home:before,
+.fa-bars:before,
+.fa-shopping-cart:before,
+.fa-user:before
+{
+    color: #fff;
+    position: absolute;
+    top: 8px;
+    left: 39px;
+
+}
+.cz-tabs a span {
+    display: block;
+    font-size: 12px;
+    margin-top: 30px;
+    color: #fff;
+}

@@ -1,0 +1,39 @@
+.cz-search {
+    padding: 0 10px;
+    position: relative;
+    margin-top: 10px;
+}
+.cz-search form {
+    padding-right: 60px;
+    overflow: hidden;
+    position: relative;
+   
+}
+.cz-search a {
+    display: block;
+    width: 60px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 34px;
+    line-height: 34px;
+    color: #fff;
+    text-align: center;  
+    background-color: #006699;  
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.cz-search input {
+    text-align: left;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: #fff;
+    border: 1px solid #006699;
+    font-size: 12px;
+}
+.cz-search .cz-history span {
+    color: #666;
+    font-size: 12px;
+    line-height: 20px;
+}
+
