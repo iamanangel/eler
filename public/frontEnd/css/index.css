@@ -25,74 +25,74 @@
 .mui-content>.mui-table-view:first-child {
     margin-top: 0px;
 }
-.cz-cate ul {
+.lt-cate ul {
     display: none;
 }
-.cz-active {
+.lt-active {
     width: 100%;
     overflow: hidden;
     padding: 0 10px;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
 }
-.cz-active a {
+.lt-active a {
     display: block;
 }
-.cz-active a:nth-child(2n+1) {
+.lt-active a:nth-child(2n+1) {
     width: 67.1%;
     float: left;
 }
-.cz-active a:nth-child(2n+1) img {
+.lt-active a:nth-child(2n+1) img {
     width: 50%;
     float: left;
 }
-.cz-active a:nth-child(2n) {
+.lt-active a:nth-child(2n) {
     width: 32.9%;
     float: right;
 }
-.cz-active a:nth-child(2n) img {
+.lt-active a:nth-child(2n) img {
     width: 100%;
     vertical-align: middle;
 }
 
 /* brand专区 */
-.cz-brand {
+.lt-brand {
     width: 100%;
     padding: 0 10px;  
 }
-.cz-brand>img {
+.lt-brand>img {
     width: 100%;
     vertical-align: middle;
 }
-.cz-brand ul {
+.lt-brand ul {
     width: 100%;
     overflow: hidden;
 }
-.cz-brand ul li {
+.lt-brand ul li {
     float: left;
     width: 25%;
 }
-.cz-brand ul a {
+.lt-brand ul a {
     display: block;
     width: 100%;
 }
-.cz-brand ul a img {
+.lt-brand ul a img {
     width: 100%;
     vertical-align: middle;
 }
 
 /* live专区 */
-.cz-live {
+.lt-live {
     width: 100%;
     padding: 0 10px;
     text-align: center;
     box-sizing: border-box;
 }
-.cz-live>img {
+.lt-live>img {
     width: 100%;
     vertical-align: middle;
 }
-.cz-live a {
+.lt-live a {
     display: block;
     float: left;
     width: 50%;
@@ -102,28 +102,28 @@
     margin-bottom: 8px;
 }
 
-.cz-live a img {
+.lt-live a img {
     width: 100%;
     vertical-align: middle;
 }
-.cz-live .box {
+.lt-live .box {
     background-color: #fff;
     box-shadow: 0 0 5px #ccc;
 }
-.cz-live .name {
+.lt-live .name {
     padding: 0 8px;
     text-align: center;
 }
-.cz-live p {
+.lt-live p {
     text-align: center;
 }
-.cz-live p .price {
+.lt-live p .price {
     color: red;
 }
-.cz-live p .oldPrice {
+.lt-live p .oldPrice {
     text-decoration: line-through;
 }
-.cz-live .btn {
+.lt-live .btn {
     text-align: center;
     background-color: #006699;
     margin: 8px 0;
