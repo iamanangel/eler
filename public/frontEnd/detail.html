@@ -27,7 +27,7 @@
 
 <body>
     <header class="mui-bar mui-bar-nav lt-topBar">
-        <a class="fa fa-arrow-left mui-pull-left" href="./index.html"></a>
+        <a class="fa fa-arrow-left mui-pull-left" href="javascript:history.back();"></a>
         <a id="info" class="icon_home fa fa-home mui-pull-right "></a>
         <h1 class="mui-title">商品详情</h1>
     </header>
@@ -40,8 +40,8 @@
     <!-- 内容区域 -->
     <div class="lt-container">
         <div class="mui-scroll-wrapper">
-            <div class="mui-scroll">
-                <div class="mui-slider">
+            <div class="mui-scroll lt-details">
+                <!-- <div class="mui-slider">
                     <div class="mui-slider-group mui-slider-loop">
                         <div class="mui-slider-item">
                             <a href="#">
@@ -68,8 +68,8 @@
                 <p class="product-name">Sport飓风 Nike Kwazi 休闲运动鞋男 844839-002-001-100-400</p>
                 <div class="product-price">
                     <span>价格：</span>
-                    <span>￥499.1</span>
-                    <span>￥888.1</span>
+                    <span class="new">￥499.1</span>
+                    <span class="old">￥888.1</span>
                 </div>
                 <div class="product-size">
                     <span>尺码：</span>
@@ -96,17 +96,70 @@
                     <span>50</span>
                 </div>
                 <div class="detail-num">
-                    <span>数量:</span>
-                    <span>-</span>
-                    <span>0</span>
-                    <span>+</span>
-                    <span>剩余:333件</span>
-                </div>
+                    <span class="number">数量:</span>
+                    <span class="detail-buy">-</span>
+                    <span class="detail-buy">0</span>
+                    <span class="detail-buy">+</span>
+                    <span class="remain">剩余：333件</span>
+                </div> -->
             </div>
         </div>
-
     </div>
 
+    <!-- 模板引擎 -->
+
+    <script type="text/template" id="detailTemplate">
+        <div class="mui-slider">
+                <div class="mui-slider-group mui-slider-loop">
+                    <div class="mui-slider-item">
+                        <a href="#">
+                            <img src="<%=pic[0].picAddr%>" />
+                        </a>
+                    </div>
+                    <div class="mui-slider-item">
+                        <a href="#">
+                            <img src="<%=pic[0].picAddr%>" />
+                        </a>
+                    </div>
+
+                    <div class="mui-slider-item">
+                        <a href="#">
+                            <img src="<%=pic[0].picAddr%>" />
+                        </a>
+                    </div>
+                </div>
+                <div class="mui-slider-indicator">
+                    <div class="mui-indicator mui-active"></div>
+                    <div class="mui-indicator"></div>
+                </div>
+            </div>
+            <p class="product-name"><%=proName%></p>
+            <div class="product-price">
+                <span>价格：</span>
+                <span class="new">￥<%=price%></span>
+                <span class="old">￥<%=oldPrice%></span>
+            </div>
+            <div class="product-size">
+                <span>尺码:</span>
+                <%for(var i = size[0]; i<= size[1]; i++) {%>
+                    <span><%=i%></span>
+                    <%}%>
+            </div>
+            <div class="detail-num">
+                <span class="number">数量:</span>
+                <span class="detail-buy">-</span>
+                <span class="detail-buy">0</span>
+                <span class="detail-buy">+</span>
+                <span class="remain">剩余：<%=num%>件</span>
+            </div>
+    </script>
+
+    <!-- 鞋子尺码模板引擎 -->
+    <!-- <script type="text/template" id="numTemplate">
+        <%for (var i = arr[0]; i <= arr[1]; i++) {%>
+            <span><%=i%></span>
+            <%}%>
+    </script> -->
 
     <script src="./lib/mui/js/mui.min.js"></script>
     <!-- 这是zepto里的核心模块之一在开发的时候可以一一进行引入 但是当项目上线之后 就需要合并所有模块 -->
@@ -114,6 +167,7 @@
     <script src="./lib/artTemplate/template-native.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/common.js"></script>
+    <script src="./js/detail.js"></script>
 
 </body>
 
